@@ -1,0 +1,287 @@
+Q1: Probability Mass Function (PMF):
+
+The PMF is a function that gives the probability that a discrete random variable is exactly equal to some value. For a discrete random variable 
+𝑋
+X, the PMF is defined as 
+𝑃
+(
+𝑋
+=
+𝑥
+)
+P(X=x), which represents the probability that 
+𝑋
+X takes the value 
+𝑥
+x.
+Example: Suppose a fair six-sided die is rolled. The PMF for each outcome (1, 2, 3, 4, 5, 6) is 
+𝑃
+(
+𝑋
+=
+𝑥
+)
+=
+1
+6
+P(X=x)= 
+6
+1
+​
+ .
+Probability Density Function (PDF):
+
+The PDF is a function that describes the likelihood of a continuous random variable taking on a particular value. For a continuous random variable 
+𝑋
+X, the PDF, denoted as 
+𝑓
+(
+𝑥
+)
+f(x), represents the density of the probability rather than the probability itself. The probability that 
+𝑋
+X falls within a specific interval is given by the area under the curve of the PDF over that interval.
+Example: For a standard normal distribution, the PDF is given by 
+𝑓
+(
+𝑥
+)
+=
+1
+2
+𝜋
+𝑒
+−
+𝑥
+2
+2
+f(x)= 
+2π
+​
+ 
+1
+​
+ e 
+− 
+2
+x 
+2
+ 
+​
+ 
+ . This function describes the bell-shaped curve, with the highest density at 
+𝑥
+=
+0
+x=0.
+
+Q2
+
+The CDF of a random variable 
+𝑋
+X is a function that gives the probability that 
+𝑋
+X will take a value less than or equal to 
+𝑥
+x. For a continuous random variable, the CDF is the integral of the PDF, while for a discrete random variable, it is the sum of the PMF.
+The CDF is defined as 
+𝐹
+(
+𝑥
+)
+=
+𝑃
+(
+𝑋
+≤
+𝑥
+)
+F(x)=P(X≤x).
+Example: Suppose 
+𝑋
+X is a continuous random variable following a normal distribution with mean 0 and standard deviation 1. The CDF 
+𝐹
+(
+𝑥
+)
+F(x) represents the probability that 
+𝑋
+X is less than or equal to a specific value 
+𝑥
+x. For instance, 
+𝐹
+(
+1
+)
+F(1) would give the probability that 
+𝑋
+X is less than or equal to 1.
+
+Why is the CDF used?
+
+The CDF is useful because it provides a way to determine the probability that a random variable falls within a specific range. It also helps in comparing different distributions and in determining percentiles and quantiles of a distribution.
+
+Q3:
+
+Heights of People: The distribution of adult heights in a population typically follows a normal distribution.
+IQ Scores: IQ scores are often modeled using a normal distribution, with most people scoring near the average and fewer people scoring very high or very low.
+Measurement Errors: In many physical sciences, measurement errors are normally distributed.
+Parameters and Their Relation to the Shape:
+
+Mean (
+𝜇
+μ): The mean determines the center of the distribution. It is the point of symmetry of the bell curve.
+Standard Deviation (
+𝜎
+σ): The standard deviation determines the spread or width of the distribution. A larger standard deviation results in a wider and flatter curve, while a smaller standard deviation results in a narrower and taller curve.
+
+Q4:
+
+The normal distribution is fundamental in statistics because many statistical methods assume normality. It is the basis for many inferential statistics, including hypothesis testing and confidence intervals.
+The Central Limit Theorem states that the sum of a large number of independent and identically distributed random variables tends to be normally distributed, regardless of the original distribution, which makes the normal distribution particularly useful in practice.
+Real-Life Examples:
+
+Human Body Temperatures: The distribution of human body temperatures is approximately normal, centered around 98.6°F.
+Blood Pressure: Blood pressure measurements in a population typically follow a normal distribution.
+Grades on a Test: In large exams, the distribution of scores often approximates a normal distribution.
+
+Q5: 
+Bernoulli Distribution:
+
+The Bernoulli distribution is the probability distribution of a random variable which takes the value 1 with probability 
+𝑝
+p (success) and the value 0 with probability 
+1
+−
+𝑝
+1−p (failure). It represents the outcome of a single trial with two possible outcomes.
+Example: Flipping a coin and recording 1 for heads and 0 for tails. If the coin is fair, 
+𝑝
+=
+0.5
+p=0.5.
+Difference between Bernoulli and Binomial Distribution:
+
+Bernoulli Distribution: Represents a single trial with two outcomes (success or failure). It has only one parameter 
+𝑝
+p, the probability of success.
+Binomial Distribution: Represents the number of successes in 
+𝑛
+n independent Bernoulli trials. It has two parameters: 
+𝑛
+n (number of trials) and 
+𝑝
+p (probability of success).
+
+Q6: 
+To find this probability, we first calculate the z-score:
+
+𝑧
+=
+𝑋
+−
+𝜇
+𝜎
+=
+60
+−
+50
+10
+=
+1
+z= 
+σ
+X−μ
+​
+ = 
+10
+60−50
+​
+ =1
+Using the standard normal distribution table, the probability that 
+𝑍
+≤
+1
+Z≤1 is approximately 0.8413. Therefore, the probability that 
+𝑍
+>
+1
+Z>1 is:
+
+𝑃
+(
+𝑋
+>
+60
+)
+=
+1
+−
+𝑃
+(
+𝑍
+≤
+1
+)
+=
+1
+−
+0.8413
+=
+0.1587
+P(X>60)=1−P(Z≤1)=1−0.8413=0.1587
+So, the probability that a randomly selected observation will be greater than 60 is 0.1587 or 15.87%.
+
+Q7
+Uniform Distribution:
+
+A uniform distribution is a probability distribution in which all outcomes are equally likely. For a continuous uniform distribution, any value within a given interval has an equal probability of occurring.
+
+Example: If you roll a fair six-sided die, the outcome is uniformly distributed because each of the six outcomes (1, 2, 3, 4, 5, 6) has an equal probability of 
+1
+6
+6
+1
+​
+ . Similarly, if you randomly select a number between 0 and 1, each number in that range is equally likely to be selected in a continuous uniform distribution.
+
+Q8
+
+A z-score represents the number of standard deviations a data point is from the mean. It is calculated as:
+𝑧
+=
+𝑋
+−
+𝜇
+𝜎
+z= 
+σ
+X−μ
+​
+ 
+where 
+𝑋
+X is the data point, 
+𝜇
+μ is the mean of the dataset, and 
+𝜎
+σ is the standard deviation.
+
+Importance:
+
+The z-score standardizes data points across different datasets, allowing for comparison between different distributions.
+It is used to determine the relative position of a data point within a distribution, which is helpful in identifying outliers and in conducting hypothesis testing.
+
+Q9: 
+
+The CLT states that the sampling distribution of the sample mean will approach a normal distribution as the sample size becomes large, regardless of the original distribution of the population, provided the samples are independent and identically distributed.
+Significance:
+
+The CLT is fundamental in statistics because it justifies the use of the normal distribution in many statistical methods, including confidence intervals and hypothesis tests, even when the underlying data is not normally distributed.
+It allows statisticians to make inferences about population parameters based on sample statistics, which is crucial for practical applications in research and industry.
+Q10: State the assumptions of the Central Limit Theorem.
+The Central Limit Theorem assumes the following:
+
+Independent Observations: The samples must be independent of each other.
+Identically Distributed: Each sample should come from the same population and have the same distribution.
+Sample Size: The sample size should be sufficiently large. While the CLT can apply for smaller samples if the population distribution is approximately normal, a larger sample size is generally required for distributions that are skewed or have heavy tails. A common rule of thumb is a sample size of at least 30.

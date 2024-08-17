@@ -1,0 +1,151 @@
+Q1. The Probability Density Function (PDF) is a function that describes the likelihood of a continuous random variable taking on a particular value. The PDF represents the probability of the variable falling within a particular range of values, as opposed to a single point. The area under the curve of the PDF over a given range represents the probability of the random variable falling within that range. The total area under the curve of a PDF is always equal to 1.
+
+Q2.Probability distributions can be broadly classified into two categories:
+
+Discrete Probability Distributions:
+
+Binomial Distribution: Describes the number of successes in a fixed number of independent Bernoulli trials with a constant probability of success.
+Poisson Distribution: Describes the number of events occurring within a fixed interval of time or space, where these events occur with a known constant mean rate and independently of the time since the last event.
+Continuous Probability Distributions:
+
+Normal Distribution: Also known as the Gaussian distribution, it is symmetric and describes how the values of a variable are distributed, where most of the data points cluster around the mean.
+Exponential Distribution: Describes the time between events in a Poisson process, where events occur continuously and independently at a constant average rate.
+
+Q3. 
+import math
+
+def normal_pdf(x, mean, std_dev):
+    coefficient = 1 / (std_dev * math.sqrt(2 * math.pi))
+    exponent = math.exp(-0.5 * ((x - mean) / std_dev) ** 2)
+    return coefficient * exponent
+
+# Example usage:
+mean = 0
+std_dev = 1
+x = 1
+pdf_value = normal_pdf(x, mean, std_dev)
+print(f"PDF at x = {x} for N({mean}, {std_dev}^2) is {pdf_value}")
+
+Q4. Properties of Binomial Distribution:
+
+Fixed Number of Trials: The experiment consists of a fixed number of trials, 
+𝑛
+n.
+Two Possible Outcomes: Each trial has only two possible outcomes: success or failure.
+Constant Probability: The probability of success, 
+𝑝
+p, is the same for each trial.
+Independent Trials: Each trial is independent of the others.
+Examples:
+
+Flipping a Coin: Counting the number of heads (successes) in 10 flips of a fair coin.
+Quality Control: Counting the number of defective items (successes) in a batch of 20 items produced in a factory.
+
+Q5.
+import numpy as np
+import matplotlib.pyplot as plt
+
+# Parameters
+n = 10  # Number of trials
+p = 0.4  # Probability of success
+size = 1000  # Sample size
+
+# Generate the sample
+sample = np.random.binomial(n, p, size)
+
+# Plot the histogram
+plt.hist(sample, bins=range(n+2), edgecolor='black', alpha=0.7)
+plt.title('Histogram of Binomial Distribution (n=10, p=0.4)')
+plt.xlabel('Number of Successes')
+plt.ylabel('Frequency')
+plt.show()
+
+Q6.import math
+
+def poisson_cdf(k, mean):
+    cdf = 0
+    for i in range(k + 1):
+        cdf += (mean ** i * math.exp(-mean)) / math.factorial(i)
+    return cdf
+
+# Example usage:
+mean = 5
+k = 3
+cdf_value = poisson_cdf(k, mean)
+print(f"CDF at k = {k} for Poisson({mean}) is {cdf_value}")
+
+Q7. 
+Binomial Distribution:
+
+Scenario: Used for a fixed number of independent trials, each with two possible outcomes (success or failure).
+Parameters: 
+𝑛
+n (number of trials) and 
+𝑝
+p (probability of success).
+Example: Counting the number of heads in 10 coin flips.
+Poisson Distribution:
+
+Scenario: Used for counting the number of events occurring in a fixed interval of time or space, with events happening at a constant rate and independently of the last event.
+Parameter: 
+𝜆
+λ (mean number of occurrences in the interval).
+Example: Counting the number of emails received in an hour.
+
+Q8. 
+import numpy as np
+
+# Parameters
+mean = 5
+size = 1000
+
+# Generate the sample
+sample = np.random.poisson(mean, size)
+
+# Calculate sample mean and variance
+sample_mean = np.mean(sample)
+sample_variance = np.var(sample)
+
+print(f"Sample Mean: {sample_mean}")
+print(f"Sample Variance: {sample_variance}")
+
+Q9. 
+Mean: 
+𝜇
+=
+𝑛
+𝑝
+μ=np
+Variance: 
+𝜎
+2
+=
+𝑛
+𝑝
+(
+1
+−
+𝑝
+)
+σ 
+2
+ =np(1−p)
+Poisson Distribution:
+
+Mean: 
+𝜇
+=
+𝜆
+μ=λ
+Variance: 
+𝜎
+2
+=
+𝜆
+σ 
+2
+ =λ
+In a Poisson distribution, the mean and variance are equal.
+
+Q10. 
+In a normal distribution, the least frequent data appears in the tails, farthest from the mean. The data near the mean is the most frequent, and as you move further away from the mean in either direction, the frequency of data points decreases rapidly.

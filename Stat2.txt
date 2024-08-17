@@ -1,0 +1,350 @@
+Q1.The three measures of central tendency are mean, median, and mode.
+
+Q2.
+ mean:
+Definition: The mean is the arithmetic average of a set of numbers, calculated by summing all the values and dividing by the number of values.
+Use: The mean is used when you want to determine the overall average of the dataset. It’s most effective with data that is symmetrically distributed without outliers.
+Example: For the dataset [2, 3, 4, 5, 6], the mean is (2+3+4+5+6)/5 = 4.
+Median:
+
+Definition: The median is the middle value in a dataset when it is ordered from least to greatest. If there is an even number of observations, the median is the average of the two middle numbers.
+Use: The median is useful when the data is skewed or contains outliers, as it is less affected by extreme values.
+Example: For the dataset [2, 3, 4, 5, 6], the median is 4.
+Mode:
+
+Definition: The mode is the value that appears most frequently in a dataset.
+Use: The mode is used when you want to identify the most common value in a dataset. It is particularly useful for categorical data.
+Example: For the dataset [2, 3, 4, 4, 5, 6], the mode is 4.
+Q3.
+
+Mean:
+Mean
+=
+∑
+all values
+number of values
+=
+2830.3
+16
+=
+176.9
+Mean= 
+number of values
+∑all values
+​
+ = 
+16
+2830.3
+​
+ =176.9
+Median:
+Ordering the data: 
+172.5
+,
+175
+,
+175
+,
+176
+,
+176
+,
+176.2
+,
+176.5
+,
+177
+,
+177
+,
+177
+,
+178
+,
+178
+,
+178.2
+,
+178.9
+,
+179
+,
+180
+172.5,175,175,176,176,176.2,176.5,177,177,177,178,178,178.2,178.9,179,180
+The median is the average of the 8th and 9th values: 
+177
++
+177
+2
+=
+177
+2
+177+177
+​
+ =177.
+Mode:
+The mode is 177, as it appears most frequently in the dataset.
+
+Q4. 
+The standard deviation calculation involves several steps:
+
+Calculate the mean (
+𝜇
+μ) of the data.
+Subtract the mean from each data point and square the result.
+Calculate the mean of these squared differences.
+Take the square root of the result from step 3 to get the standard deviation.
+I'll calculate it for you:
+
+python
+Copy code
+import numpy as np
+
+data = [178, 177, 176, 177, 178.2, 178, 175, 179, 180, 175, 178.9, 176.2, 177, 172.5, 178, 176.5]
+mean = np.mean(data)
+squared_diffs = [(x - mean) ** 2 for x in data]
+variance = np.mean(squared_diffs)
+std_dev = np.sqrt(variance)
+std_dev
+
+Q5. Range:
+
+Definition: The difference between the highest and lowest values in the dataset.
+Example: In a dataset of ages 
+[
+10
+,
+12
+,
+14
+,
+16
+,
+18
+]
+[10,12,14,16,18], the range is 
+18
+−
+10
+=
+8
+18−10=8.
+Use: The range gives a quick sense of the spread but doesn’t consider how the data is distributed between the extremes.
+Variance:
+
+Definition: The average of the squared differences between each data point and the mean.
+Example: In a dataset of 
+[
+2
+,
+4
+,
+4
+,
+4
+,
+5
+,
+5
+,
+7
+,
+9
+]
+[2,4,4,4,5,5,7,9], the variance measures how much each number varies from the mean.
+Use: Variance provides a more precise measure of spread by considering all data points, not just the extremes.
+Standard Deviation:
+
+Definition: The square root of the variance.
+Example: If the variance in a dataset is 4, the standard deviation is 2.
+Use: Standard deviation is used more frequently than variance because it is in the same units as the data, making it easier to interpret.
+
+Q6. A Venn diagram is a visual tool used to show the relationships between different sets. It consists of overlapping circles, with each circle representing a set. The areas where the circles overlap represent elements that are common to the sets, while the non-overlapping areas represent elements that are unique to each set.
+
+Q7.
+𝐴
+∩
+𝐵
+=
+{
+2
+,
+6
+}
+A∩B={2,6}
+(ii) A ⋃ B (Union of A and B):
+Answer: 
+𝐴
+⋃
+𝐵
+=
+{
+0
+,
+2
+,
+3
+,
+4
+,
+5
+,
+6
+,
+7
+,
+8
+,
+10
+}
+A⋃B={0,2,3,4,5,6,7,8,10}
+
+Q8.
+Skewness refers to the asymmetry in the distribution of data. If the data is not symmetrically distributed, it is said to be skewed. There are two types of skewness:
+
+Positive (Right) Skewness: The tail on the right side is longer or fatter, meaning the bulk of the data is on the left.
+Negative (Left) Skewness: The tail on the left side is longer or fatter, meaning the bulk of the data is on the right.
+
+Q9. 
+In a right-skewed distribution, the mean is usually greater than the median. The mean is pulled in the direction of the long tail on the right side.
+
+Q10. 
+
+Definition: Covariance measures the direction of the linear relationship between two variables. If the covariance is positive, the variables tend to increase together; if negative, one variable tends to decrease as the other increases.
+Use: Covariance gives a sense of how two variables move together but does not standardize the relationship, making it difficult to interpret the strength of the relationship.
+Correlation:
+
+Definition: Correlation standardizes covariance to a value between -1 and 1, making it easier to interpret. A correlation of 1 means a perfect positive linear relationship, -1 means a perfect negative linear relationship, and 0 means no linear relationship.
+Use: Correlation is commonly used in statistical analysis to determine the strength and direction of a relationship between two variables.
+
+Q11.
+ The sample mean (
+𝑥
+ˉ
+x
+ˉ
+ ) is calculated as:
+𝑥
+ˉ
+=
+∑
+𝑖
+=
+1
+𝑛
+𝑥
+𝑖
+𝑛
+x
+ˉ
+ = 
+n
+∑ 
+i=1
+n
+​
+ x 
+i
+​
+ 
+​
+ 
+where 
+𝑥
+𝑖
+x 
+i
+​
+  are the individual sample observations, and 
+𝑛
+n is the number of observations.
+
+Example: For the dataset 
+[
+2
+,
+4
+,
+6
+,
+8
+,
+10
+]
+[2,4,6,8,10], the sample mean is:
+𝑥
+ˉ
+=
+2
++
+4
++
+6
++
+8
++
+10
+5
+=
+30
+5
+=
+6
+x
+ˉ
+ = 
+5
+2+4+6+8+10
+​
+ = 
+5
+30
+​
+ =6
+
+Q12. 
+For a normal distribution, the mean, median, and mode are all equal and located at the center of the distribution.
+
+Q13. Covariance measures the direction of the relationship between two variables but does not standardize the relationship, making it harder to compare across different datasets.
+Correlation standardizes the relationship between two variables, making it easier to compare across different datasets.
+
+Q14.Central Tendency: Outliers can significantly affect the mean by pulling it towards the outlier, but they have less impact on the median and mode.
+
+Example: In the dataset 
+[
+1
+,
+2
+,
+3
+,
+4
+,
+100
+]
+[1,2,3,4,100], the mean is 22, but the median is 3, showing how the outlier (100) skews the mean.
+Dispersion: Outliers increase the range, variance, and standard deviation, as these measures are sensitive to extreme values.
+
+Example: Adding an outlier to the dataset 
+[
+1
+,
+2
+,
+3
+,
+4
+]
+[1,2,3,4] to get 
+[
+1
+,
+2
+,
+3
+,
+4
+,
+100
+]
+[1,2,3,4,100] drastically increases the standard deviation from 1.12 to 39.2.
